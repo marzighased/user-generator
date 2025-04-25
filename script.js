@@ -14,7 +14,13 @@ async function fetchUser() {
         userName.textContent = `${user.name.first} ${user.name.last}`;
         userEmail.textContent = user.email;
         userLocation.textContent = `${user.location.city}, ${user.location.country}`;
+    }   catch (error) {
+        userName.textContent = "Error loading user";
+        console.error("Error fetching user:", error);
     }
 
 }
+
+window.addEventListener("DOMContentLoaded", fetchUser);
+newUserBtn.addEventListener("click", fetchUser);
 
