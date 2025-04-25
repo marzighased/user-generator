@@ -9,6 +9,11 @@ async function fetchUser() {
         const response = await fetch("https://randomuser.me/api/");
         const data = await response.json();
         const user = data.results[0];
+
+        userImg.src = user.picture.large;
+        userName.textContent = `${user.name.first} ${user.name.last}`;
+        userEmail.textContent = user.email;
+        userLocation.textContent = `${user.location.city}, ${user.location.country}`;
     }
 
 }
