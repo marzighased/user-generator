@@ -10,13 +10,15 @@
     <div class="container">
         <h1>Random User Generator</h1>
         <div class="card" id="user-card">
-            <img src="" alt="User Photo" id="user-img">
-            <h2 id="user-name">Loading...</h2>
-            <p id="user-email"></p>
-            <p id="user-location"></p>
-            <button id="new-user-btn">Load New User</button>
+            <div class="loader" id="loader"></div>
+            <img src="" alt="User Photo" id="user-img" class="hidden">
+            <h2 id="user-name" class="hidden">Loading...</h2>
+            <p id="user-email" class="hidden"></p>
+            <p id="user-location" class="hidden"></p>
+            <button id="new-user-btn" class="hidden">Load New User</button>
         </div>
     </div>
+        
     <script src="script.js"></script>
 </body>
 </html>
