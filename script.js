@@ -21,6 +21,28 @@ async function fetchUser() {
 
 }
 
+const loader = document.getElementById("loader");
+
+function showLoader() {
+    loader.classList.remove("hidden");
+    userImg.classList.add("hidden");
+    userName.classList.add("hidden");
+    userEmail.classList.add("hidden");
+    userLocation.classList.add("hidden");
+    newUserBtn.classList.add("hidden");
+}
+
+function hideLoader() {
+    loader.classList.add("hidden");
+    userImg.classList.remove("hidden");
+    userName.classList.remove("hidden");
+    userEmail.classList.remove("hidden");
+    userLocation.classList.remove("hidden");
+    newUserBtn.classList.remove("hidden");
+}
+
 window.addEventListener("DOMContentLoaded", fetchUser);
 newUserBtn.addEventListener("click", fetchUser);
+
+
 
