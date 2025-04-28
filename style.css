@@ -75,3 +75,18 @@ button:hover {
 .hidden {
     display: none;
 }
+
+@keyframes fadeSideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animation-card {
+    animation: faadeSlideIn 0.6s ease forwards;
+}

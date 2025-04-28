@@ -45,6 +45,8 @@ async function fetchUser() {
 
 }
 
+
+
 window.addEventListener("DOMContentLoaded", fetchUser);
 newUserBtn.addEventListener("click", fetchUser);
 
