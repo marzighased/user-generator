@@ -23,6 +23,13 @@ function hideLoader() {
     userEmail.classList.remove("hidden");
     userLocation.classList.remove("hidden");
     newUserBtn.classList.remove("hidden");
+
+    const userCard = document.getElementById("user-card");
+    userCard.classList.add("animate-card");
+
+    setTimeout(() => {
+        userCard.classList.remove("animate-card");
+    }, 700);
 }
 
 async function fetchUser() {
@@ -44,7 +51,6 @@ async function fetchUser() {
     }
 
 }
-
 
 
 window.addEventListener("DOMContentLoaded", fetchUser);
